@@ -62,9 +62,9 @@ if nargin < 2
     option_display = true;
 end
 
-assert(nargin >= 1,'Not enough input arguments.');
-assert(nargin < 3,'Too many input arguments.');
-assert(isreal(n) && n >= 1 && rem(n,1) == 0,'Level must be a stricly positive integer.');
+assert(nargin >= 1,'Error : not enough input arguments.');
+assert(nargin < 3,'Error : too many input arguments.');
+assert(isreal(n) && n >= 1 && rem(n,1) == 0,'Error : level must be a stricly positive integer.');
 
 
 %% Body
@@ -277,7 +277,7 @@ while p <= nbstep^2 && row_length > 1
             
             T(row_idx,:) = [i i+1 i+row_length];
             row_idx = row_idx + 1;            
-            T(row_idx,:) = [i i+1 i-row_length]; % + upside-down triangles serie
+            T(row_idx,:) = [i i-row_length i+1]; % + upside-down triangles serie
             row_idx = row_idx + 1;            
             i = i +1;
             
