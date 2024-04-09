@@ -5,7 +5,7 @@
 %
 % Algorithm principle is based on sampling the 20 icosahedron triangles.
 %
-% Author & support : nicolas.douillet (at) free.fr, 2017-2021.
+% Author : nicolas.douillet (at) free.fr, 2017-2024.
 %
 %% Syntax
 % [V, T] = geoid(n)
@@ -21,9 +21,10 @@
 %
 %% See also 
 %
-% <https://fr.mathworks.com/matlabcentral/fileexchange/64284-sphere-homeomorphic-surface-quasi-isotropic-sampling?s_tid=prof_contriblnk sphere_homeo_sfc_isotropic_splg> |
-% <https://fr.mathworks.com/help/matlab/ref/sphere.html?s_tid=srchtitle sphere> |
-% <https://fr.mathworks.com/matlabcentral/fileexchange/64395-sample_triangle?s_tid=prof_contriblnk sample_triangle>
+% <https://fr.mathworks.com/matlabcentral/fileexchange/77446-platonic-solids?s_tid=prof_contriblnk platonic_solids> |
+% <https://fr.mathworks.com/matlabcentral/fileexchange/65574-tetrahedron-circumsphere?s_tid=prof_contriblnk tetrahedron_circumsphere> |
+% <https://fr.mathworks.com/matlabcentral/fileexchange/121133-tetrahedron-insphere?s_tid=prof_contriblnk tetrahedron_insphere> |
+% <https://fr.mathworks.com/matlabcentral/fileexchange/64395-sample-triangle-2d-3d-nd?s_tid=ta_fx_results sample_triangle>
 %
 %% Input arguments
 %

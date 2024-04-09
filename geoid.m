@@ -1,9 +1,9 @@
 function [V, T] = geoid(n, option_display)
-%% geoid : function to generate a n-level geoid shape, defined by its
+% geoid : function to generate a n-level geoid shape, defined by its
 % vertices set and the corresponding triangulation. Vertices belong to the unit sphere.
 % Algorithm principle is based on sampling the 20 triangles of the icosahedron.
 %
-% Author & support : nicolas.douillet (at) free.fr, 2017-2021.
+% Author : nicolas.douillet (at) free.fr, 2017-2024.
 %
 %
 % Syntax
@@ -57,7 +57,7 @@ function [V, T] = geoid(n, option_display)
 % [V, T] = geoid(n, option_display);
 
 
-%% Input parsing
+% Input parsing
 if nargin < 2
     option_display = true;
 end
@@ -67,7 +67,7 @@ assert(nargin < 3,'Error : too many input arguments.');
 assert(isreal(n) && n >= 1 && rem(n,1) == 0,'Error : level must be a stricly positive integer.');
 
 
-%% Body
+% Body
 % Step I : build icosahedron
 Rho = 1;
 phi_n = 0.5*(1+sqrt(5));
@@ -193,9 +193,9 @@ if option_display
     figure;
     set(gcf, 'Color', [0 0 0]);
     TRI = triangulation(T, V(:,1), V(:,2), V(:,3));
-    t = trimesh(TRI);
+    t = trimesh(TRI, 'FaceAlpha',0.2);
     colormap([0 1 0]);
-    t.FaceColor = [0 0 0];
+    t.FaceColor = [0 1 0];
     t.LineWidth = 2;
     set(gca, 'Color', [0 0 0], 'XColor', [1 1 1], 'YColor', [1 1 1], 'ZColor', [1 1 1]);
     axis equal;
@@ -205,7 +205,7 @@ end
 end % geoid
 
 
-%% sample_triangle subfunction
+% sample_triangle subfunction
 function [V, T] = sample_triangle(V1, V2, V3, nbstep)
 
 
@@ -298,7 +298,7 @@ T = unique(T,'rows','stable');
 end % sample_triangle
 
 
-%% Remove duplicated vertices subfunction
+% Remove duplicated vertices subfunction
 function [V_out, T_out] = remove_duplicated_vertices(V_in, T_in)
 
 
