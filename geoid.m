@@ -3,7 +3,7 @@ function [V, T] = geoid(n, option_display)
 % vertices set and the corresponding triangulation. Vertices belong to the unit sphere.
 % Algorithm principle is based on sampling the 20 triangles of the icosahedron.
 %
-% Author : nicolas.douillet (at) free.fr, 2017-2024.
+% Author : nicotangente (at) free.fr, 2017-2024.
 %
 %
 % Syntax
@@ -175,7 +175,7 @@ V = V_unique;
 
 
 % Step IV : vertices normalization / projection on the sphere surface
-norm_V = sqrt(sum(V.^2,2));
+norm_V = vecnorm(V',2)';
 V = V./repmat(norm_V,[1,3]);
 
 
