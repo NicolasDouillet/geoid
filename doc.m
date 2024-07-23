@@ -5,7 +5,7 @@
 %
 % Algorithm principle is based on sampling the 20 icosahedron triangles.
 %
-% Author : nicolas.douillet (at) free.fr, 2017-2024.
+% Author : nicolas.douillet9 (at) gmail.com, 2017-2024.
 %
 %% Syntax
 % [V, T] = geoid(n)
